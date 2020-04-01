@@ -9,3 +9,18 @@ console.table( fizzBazz(15) )
 
 let a = 15;
 console.log(a);
+//< Берем текст огромный, отрезаем 40 слов, проверяем выходят они за диапазон 230 символов, если выходят мы слово последнее откидываем
+let text1 ="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+let text2 ="voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+
+// const maxLength = 230;
+// const maxWords = 40;
+// let textLengt = text1.split(' ').slice(0,maxWords).join(' ').length;
+
+function prepareText(textData, maxLength, maxWords){
+    const textLengt = textData.split(" ").slice(0,maxWords).join(" ").length;
+    return result = (textLengt > maxLength) ? (textData.split(" ").slice(0,maxWords-1).join(" ") + "...") : (textData.split(" ").slice(0,maxWords).join(" ") + "...");
+}
+
+console.log(prepareText(text1, 230,40));
+console.log(prepareText(text2, 150, 20));
