@@ -24,3 +24,64 @@ function prepareText(textData, maxLength, maxWords){
 
 console.log(prepareText(text1, 230,40));
 console.log(prepareText(text2, 150, 20));
+
+const name = 'anonim';
+
+const Sasha = {
+    name: 'Sasha',
+    password: '123456789',
+    gender: 'male',
+    age: 29,
+    salary: 2500,
+    address:{
+        street: 'Lenina 55'
+    },
+
+    sayHello: function(userName){
+        console.log(`Привет ${userName}, мое имя ${this.name}`)
+    },
+}
+
+const John = {
+    name: 'John',
+    password: '123456789',
+    gender: 'male',
+    age: 37,
+    salary: 2500,
+    address:{
+        street: 'Lenina 55'
+    },
+
+    sayHello: function(userName){
+        console.log(`Hello ${userName}, my name ${this.name}`)
+    },
+}
+
+
+const getRandomFirstName = () => {
+    const names = [
+        "Aaliyah",
+        "Aaron",
+        "Abagail",
+        "Abbey",
+        "Abbie",
+        "Abbigail",
+        "Abby",
+        "Abdiel",
+        "Abdul",
+        "Abdullah",
+        "Abe",
+        "Abel",
+        "Abelardo",
+        "Abigail",
+        "Abigale",
+        "Abigayle",
+        "Abner",
+        "Abraham",
+        "Ada",
+        "Adah",
+    ];
+
+    return names[Math.floor(Math.random()*names.length)]
+}
+
