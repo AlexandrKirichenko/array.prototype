@@ -57,7 +57,7 @@ const John = {
     },
 }
 
-
+// Получаем случайное имя
 const getRandomFirstName = () => {
     const names = [
         "Aaliyah",
@@ -85,3 +85,53 @@ const getRandomFirstName = () => {
     return names[Math.floor(Math.random()*names.length)]
 }
 
+// Получаем случайную фамилию
+const getRandomLastName = () => {
+    const names = [
+        "Abbott",
+        "Abernathy",
+        "Abshire",
+        "Adams",
+        "Altenwerth",
+        "Anderson",
+        "Ankunding",
+        "Armstrong",
+        "Auer",
+        "Aufderhar",
+        "Bahringer",
+        "Bailey",
+        "Balistreri",
+        "Barrows",
+        "Bartell",
+        "Bartoletti",
+        "Barton",
+        "Bashirian",
+        "Batz",
+        "Bauch",
+        "Baumbach",
+        "Bayer",
+        "Beahan",
+        "Beatty",
+        "Bechtelar",
+        "Becker",
+        "Bednar",
+    ];
+
+    return names[Math.floor(Math.random()*names.length)]
+}
+
+const getFullName = () => `${getRandomFirstName()} ${getRandomLastName()}`
+
+const getGender = () => Math.random()> 0.5?'male':'famale'
+
+function User(name=getFullName(),password,gender=getGender(),age=Math.ceil(Math.random()*100),salary=Math.ceil(Math.random()*2000)){
+    this.name = name;
+    this.password = password;
+    this.gender = gender;
+    this.age = age;
+    this.salary = salary;
+}
+
+const users = Array.from(new Array(10)).map(el => new User())
+
+const sayHello = Sasha.sayHello;
