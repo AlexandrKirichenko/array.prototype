@@ -135,3 +135,16 @@ function User(name=getFullName(),password,gender=getGender(),age=Math.ceil(Math.
 const users = Array.from(new Array(10)).map(el => new User())
 
 const sayHello = Sasha.sayHello;
+
+const sum1 = function(){
+    console.log(arguments);
+    return Array.from(arguments).reduce( (acc,i) => acc + i,0);
+}
+
+const sum2 = (x,...rest) => { //остаточные параметры, х - то что мы не забрали. Т.к. в стрелочной функции нет аргументов, и чтоб до них достучаться мы исп ...rest
+    console.log(rest); // рест придуман для того,если параметров передано больше чем надо, мы можем их забрать rest будет массивом, а не массивоподоб объектом
+    return rest.reduce( (acc,i) => acc + i,0);
+}
+
+console.log(sum1(5,10,15,20))
+console.log(sum2(5,10,15,20))
