@@ -146,5 +146,21 @@ const sum2 = (x,...rest) => { //остаточные параметры, х - т
     return rest.reduce( (acc,i) => acc + i,0);
 }
 
-console.log(sum1(5,10,15,20))
-console.log(sum2(5,10,15,20))
+console.log(sum1(5,10,15,20));
+console.log(sum2(5,10,15,20));
+//Самовызывающаяся функция 
+function f(){
+    console.log("arguments");
+}
+f();
+
+const f = function (){
+    console.log("arguments");
+}
+// console.log(f)
+console.log(f());
+
+Если нам нужно чтобы функция просто выполнилась в этом же месте , можно написать так
+(function (text){
+    console.log("arguments" + text);
+})/** функцию мы обернули, чтобы интерпретат. было понятно, что это выражение*/("some text"); //а эти что его нужно выполнить сечас
