@@ -185,3 +185,22 @@ const y = great('Bye');
 x('Oleh') // т.е. с пом замыкания можно делать конструкторы блоков, т.е. f собрал с нужными параметрами, а потом только подкидываешь 
 //значения кот. нужно менять
 y('Vlad')
+
+//Рекурсия
+const text2 = "dsgdfgsdfgfsdhfdsghghhggggggggggggggggggggg";
+
+function f(i){
+    if(text2[i] == undefined){return i;}//условие выхода из рекурсии
+    return f(i+1);
+}
+
+console.log(f(0));
+
+const arr = [0,1,2,3,4,5];
+
+function f(arr_nub){
+    if(arr_nub.length == 1){return arr_nub[0];}//условие выхода из рекурсии
+    return arr_nub.pop() + f(arr_nub);
+}
+
+console.log(f(arr));
