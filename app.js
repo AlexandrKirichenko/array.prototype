@@ -204,3 +204,14 @@ function f(arr_nub){
 }
 
 console.log(f(arr));
+
+const arr = [5,3,9,4,10,7,2];
+
+const temp = arr.sort();
+
+const temp = arr((a,b) => a - b); //сортируем массив a?b текущее и след значение, пузырьковая сортировка
+
+const avg = (temp.reduce((acc,i) => acc + i, 0))/temp.length // сред значение
+
+
+
