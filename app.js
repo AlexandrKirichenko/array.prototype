@@ -164,3 +164,13 @@ console.log(f());
 (function (text){
     console.log("arguments" + text);
 })/** функцию мы обернули, чтобы интерпретат. было понятно, что это выражение*/("some text"); //а эти что его нужно выполнить сечас
+
+var arr1 = [];
+for(var i=0;i<3;i++){
+    arr1.push( ( (a) => () => console.log(a) )(i) )
+}
+console.log("I:" + i);
+arr1[0]();
+arr1[1]();
+arr1[2]();
+//А для let все работает нормально, без замыкания
