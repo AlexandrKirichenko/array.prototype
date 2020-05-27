@@ -1,3 +1,22 @@
+class Bloger {
+    constructor(firstName, lastName, channelName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.channelName = channelName;
+    }
+
+    sayAboutBloger() {
+        console.log(`Популярный блогер:${this.firstName} ${this.lastName}-${this.channelName}`)
+    }
+}
+
+let bloger1 = new Bloger('Alexandr','Lushenko','Веб разработка');
+bloger1.sayAboutBloger();
+
+
+let bloger2 = new Bloger('Юрий','Дудь','вДудь');
+bloger2.sayAboutBloger();
+
 //Task FizzBazz
 // Напишите программу, которая выводит  все цифры от 1 до 15, с двумя исключениями. 
 // Для чисел, нацело делящихся на 3, она должна выводить ‘Fizz’, а для чисел, делящихся на 5 (но не на 3) – ‘Buzz’.
