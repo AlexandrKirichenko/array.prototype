@@ -17,6 +17,12 @@ bloger1.sayAboutBloger();
 let bloger2 = new Bloger('Юрий','Дудь','вДудь');
 bloger2.sayAboutBloger();
 
+let car = {
+    color: 'red',
+    driver: ['Vlad','Ivan'],
+    getDriver(n){console.log(`Текущий водитель ${this.driver[n]}`)}
+    }
+car.getDriver(1);
 //Task FizzBazz
 // Напишите программу, которая выводит  все цифры от 1 до 15, с двумя исключениями. 
 // Для чисел, нацело делящихся на 3, она должна выводить ‘Fizz’, а для чисел, делящихся на 5 (но не на 3) – ‘Buzz’.
